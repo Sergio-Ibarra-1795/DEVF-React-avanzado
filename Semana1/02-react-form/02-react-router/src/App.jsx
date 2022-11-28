@@ -1,10 +1,10 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
+import RoutesIndex from './routes'
 
 function App () {
   return (
     <div className='App'>
-      <h1>App</h1>
+      <RoutesIndex />
     </div>
   )
 }
