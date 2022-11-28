@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Contacto from '../pages/Contacto'
 import Home from '../pages/Home'
 import Portafolio from '../pages/Portafolio'
+import Error404 from '../pages/Error404'
 
 const RoutesIndex = () => {
   return (
