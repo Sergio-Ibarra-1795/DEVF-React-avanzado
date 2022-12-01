@@ -1,0 +1,25 @@
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+    &__logo{
+        color:gray;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+
+    &__nav-list{
+        display:flex;
+        list-style: none;
+        column-gap: 20px;
+    }
+
+    &__item-link{
+        color:rgba(128, 128, 128, 0.301);
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+}
