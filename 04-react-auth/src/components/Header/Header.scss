@@ -1,5 +1,6 @@
 $menu-color:gray;
-@mixin header-link {
+
+@mixin header-link ($hover:true) {
     color:$menu-color;
     text-decoration: none;
     letter-spacing: 2px;
@@ -29,6 +30,10 @@ $menu-color:gray;
         @include header-link;
 
         &:hover{
+            border-bottom: solid 2px firebrick;
+        }
+
+        &:--is-active{
             border-bottom: solid 2px firebrick;
         }
     }
