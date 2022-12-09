@@ -15,8 +15,9 @@ const ProductList = () => {
     resultProductos = await resultProductos.json()
     setProductList(resultProductos)
   }
-  console.log(productList)
+  // console.log(productList)
 
+  // Retorno los productos haciendo map del array llamado productList y necesito su ID como identificador unico para renderizar el nombre
   return (
     <>
       {
