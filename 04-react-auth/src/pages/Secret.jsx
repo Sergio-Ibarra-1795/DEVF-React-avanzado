@@ -1,9 +1,7 @@
-import React from 'react'
-
 const Secret = () => {
   return (
-    <div>Secret</div>
+    <h1>Secret</h1>
   )
 }
-
 export default Secret
+

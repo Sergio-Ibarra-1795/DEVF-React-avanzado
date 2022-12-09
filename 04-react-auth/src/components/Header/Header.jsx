@@ -1,24 +1,46 @@
+import { useContext } from 'react'
+import { AuthContext } from '@/context/AuthContext'
+import { Link } from 'react-router-dom'
 import './header.scss'
+
 const Header = () => {
+  const { isAuth, logout } = useContext(AuthContext)
+
   return (
     <nav className='header'>
-      <a href='/' className='header__logo'>LOGO</a>
+      <Link to='/' className='header__logo'>LOGO</Link>
       <ul className='header__nav-list'>
         <li className='header__list-item'>
-          <a href='/' className='header__item-link header__item-link--is-active'>Home</a>
+          <Link to='/' className='header__item-link header__item-link--is-active'>Home</Link>
         </li>
         <li className='header__list-item'>
-          <a href='/dashboard' className='header__item-link'>Dashboard</a>
+          <Link to='/dashboard' className='header__item-link'>Dashboard</Link>
         </li>
-        <li className='header__list-item'>
-          <a href='/secret' className='header__item-link'>Secret</a>
-        </li>
-        <li className='header__list-item'>
-          <a href='/login' className='header__item-link'>Login</a>
-        </li>
-        <li className='header__list-item'>
-          <a href='/signup' className='header__item-link'>Signup</a>
-        </li>
+        {
+          !isAuth
+            ? (
+              <>
+
+                <li className='header__list-item'>
+                  <Link to='/login' className='header__item-link'>Login</Link>
+                </li>
+                <li className='header__list-item'>
+                  <Link to='/signup' className='header__item-link'>Signup</Link>
+                </li>
+              </>
+              )
+            : (
+              <>
+                <li className='header__list-item'>
+                  <Link to='/secret' className='header__item-link'>Secret</Link>
+                </li>
+                <li className='header__list-item'>
+                  <Link to='/' className='header__item-link' onClick={logout}>Logout</Link>
+                </li>
+              </>
+              )
+        }
+
       </ul>
     </nav>
   )
