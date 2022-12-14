@@ -1,7 +1,7 @@
 import axios from 'axios'
 // Mock de la API de ecommerce usando la extensión de Live Server
 
-const BASE_URL = 'http://127.0.0.1:5500/04-react-auth/src/assets'
+const BASE_URL = 'http://127.0.0.1:5173/04-react-auth/src/assets'
 
 axios.interceptors.request.use((config) => {
   const user = window.localStorage.getItem('token')
